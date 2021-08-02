@@ -8,4 +8,11 @@ SNS pub/sub patterni ele alan uygulamadan uygulamaya (A2A) ya da uygulamadan ki�
 Format: ![Image of PubSub](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_1.png)
 * Sns "event producer" bir mesaj atar ve birden çok "event reciever" (subscriptions) SNS topic dinlemeye başlar.
 * Her bir subscriber SNS topic'ten gelen mesajı alırlar eğer bi **filtre** yok ise 
-
+* Her bir **Topic** maksimum 10 milyon subscriber olabilir. (very high scale sağlıyor)
+* 10.000 **Topic** limiti oluşturulabiliyor.
+* Subscribers:
+  * SQS
+  * HTTP/HTTPS
+  * Lambda
+  * SMS messages
+  * Mobile Notifications
