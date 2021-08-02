@@ -11,8 +11,10 @@ Format: ![Image of PubSub](https://github.com/mrtkmynsndev/SNSPOC/blob/main/imag
 * Her bir **Topic** maksimum 10 milyon subscriber olabilir. (very high scale sağlıyor)
 * 10.000 **Topic** limiti oluşturulabiliyor.
 * Subscribers:
-  * SQS
-  * HTTP/HTTPS
-  * Lambda
+  * SQS (Simple Queue Service)
+  * HTTP/HTTPS Endpoints
+  * Lambda (serverless)
   * SMS messages
   * Mobile Notifications
+* SNS amazon tarafından full yönetilen ve otomatik scale edilen bir hizmettir. Yani infrastructure, host, instance servisleri hakkında endişelenmenize gerek yok.
+* SNS mesajları kaybolmamasını garanti altına alır. (Diğer tarafa ulaşmasını garanti altına almaz :) )
