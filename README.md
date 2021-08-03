@@ -5,7 +5,7 @@ SNS pub/sub patterni ele alan uygulamadan uygulamaya (A2A) ya da uygulamadan ki�
 * Topic - Erişim noktası gibi düşünebiliriz. 
   * Örneğin bir sipariş oluşumunda olabilecek **Topic** - Create Order.
   * Birden fazla endpoint gruplamamıza olanak sağlar. Örneğin Create Order 
-* Subscriptions - Set up each defferent customers
+* Subscriptions -Erişim noktalarını dinleyen kanal gibi düşünebiliriz.
 Format: ![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_2.png)
 
 ## Pub/Sub Pattern 
