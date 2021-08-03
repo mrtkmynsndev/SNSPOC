@@ -6,11 +6,12 @@ SNS pub/sub patterni ele alan uygulamadan uygulamaya (A2A) ya da uygulamadan ki�
   * Örneğin bir sipariş oluşumunda olabilecek **Topic** - Create Order.
   * Birden fazla endpoint gruplamamıza olanak sağlar. Örneğin Create Order 
 * Subscriptions -Erişim noktalarını dinleyen kanal gibi düşünebiliriz.
-Format: ![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_2.png)
+
+![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_2.png)
 
 ## Pub/Sub Pattern 
 * Pub publisher (mesaj yayınlayan) ve Sub Subscriber (mesajı alan)
-Format: ![Image of PubSub](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_1.png)
+![Image of PubSub](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_1.png)
 * Sns "event producer" bir mesaj atar ve birden çok "event reciever" (subscriptions) SNS topic dinlemeye başlar.
 * Her bir subscriber SNS topic'ten gelen mesajı alırlar eğer bi **filtre** yok ise 
 * Her bir **Topic** maksimum 10 milyon subscriber olabilir. (very high scale sağlıyor)
