@@ -1,5 +1,3 @@
-# SNSPOC
-
 # What is SNS?
 SNS pub/sub patterni ele alan uygulamadan uygulamaya (A2A) ya da uygulamadan kişiye (A2P) iletişim için yönetilen mesajlaşma hizmetidir.
 
