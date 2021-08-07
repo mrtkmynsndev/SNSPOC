@@ -35,11 +35,24 @@ A2A için müşterinin ürün satın aldığı süreci örnek olarak verebiliriz
 * SNS mesajları kaybolmamasını garanti altına alır. (Diğer tarafa ulaşmasını garanti altına almaz :) ) (deadLetterQueue)
 
 
-# Topic and Subscription
-* Topic - Erişim noktası gibi düşünebiliriz. 
+# Topic
+Topic - Erişim noktası gibi düşünebiliriz. 
   * Örneğin bir sipariş oluşumunda olabilecek **Topic** - Create Order.
   * Birden fazla endpoint gruplamamıza olanak sağlar. Örneğin Create Order 
-* Subscriptions -Erişim noktalarını dinleyen kanal gibi düşünebiliriz.
+
+# Subscription
+Topic (erişim noktalarını) dinleyen/abone olan servisler.
+
+### Type of endpoint to subscribe
+* Amazon Knesis Data Firehouse
+* Amazon SQS
+* AWS Lambda
+* HTTP/HTTPS
+* SMS
+* Email
+
+### Subscription filter policy
+Subscription aldığı mesajları filtreler. Varsayılan olarak, topic publish edilen her message subscription tarafından alınır.
 
 ![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_2.png)
 
