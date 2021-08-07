@@ -43,6 +43,8 @@ Topic - Erişim noktası gibi düşünebiliriz.
 # Subscription
 Topic (erişim noktalarını) dinleyen/abone olan servisler.
 
+![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_2.png)
+
 ### Type of endpoint to subscribe
 * Amazon Knesis Data Firehouse
 * Amazon SQS
@@ -52,10 +54,9 @@ Topic (erişim noktalarını) dinleyen/abone olan servisler.
 * Email
 
 ### Subscription filter policy
-Subscription aldığı mesajları filtreler. Varsayılan olarak, topic publish edilen her message subscription tarafından alınır.
+Subscription aldığı mesajları filtreleyebilirler. Varsayılan olarak, topic tarafından publish edilen her message subscription tarafından alınır.
 
-![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_2.png)
-
+![Image of Filter Policy](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_filter_policy.png)
 
 # Encryption
 * publish message in-transit modunda default olarak encrypte ediliyor.
