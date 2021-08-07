@@ -17,15 +17,14 @@ A2A için müşterinin ürün satın aldığı süreci örnek olarak verebiliriz
 * pub ile sub arasında 1 to many ilişkisi var. pub'ın yayınladığı bir mesaj birden çok sub'a ulaşır.
 * pub/sub model bir nevi fanout modele benziyor. (**fanout**: mesajı her yere ilet)
 
-![Image of PubSub](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_1.png)
+![Image of PubSub](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_pub_sub.png)
 
 # The orher properties of SNS?
-* Sns "event producer" bir mesaj atar ve birden çok "event reciever" (subscriptions) SNS topic dinlemeye başlar.
-* Her bir subscriber SNS topic'ten gelen mesajı alırlar eğer bir **filtre** yok ise 
 * Her bir **Topic** maksimum 10 milyon subscriber olabilir. (very high scale sağlıyor)
 * 10.000 **Topic** limiti oluşturulabiliyor.
-* Gönderilen mesaj birden fazla **consumer(tüketici)** tarafına iletilebilir. 
-* Subscribers:
+* Gönderilen mesaj birden fazla **consumer(tüketici)** tarafına iletilebilir. (topic ile subscriptions arasında one to many ilişkisi)
+* Subscriber **policy ve filtre** uygulanabilir. 
+* Type of the subscribers:
   * SQS (Simple Queue Service)
   * HTTP/HTTPS Endpoints
   * Lambda (serverless)
@@ -59,9 +58,9 @@ Subscription aldığı mesajları filtreleyebilirler. Varsayılan olarak, topic 
 Subscription'lara başarılı bir şekilde iletilemeyen mesajların kaydedildiği yer. 
 * DLQ mesajların yazılabilmesi için Amazon SQS queue gereklidir. (iletilemeyen mesajların temsilcisi gibi düşünebiliriz.)
 
-# Topic and Subscription 
+# Topic and Subscription Relations
 
-![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_2.png)
+![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_topic_subscriptions.png)
 
 # Encryption
 * publish message in-transit modunda default olarak encrypte ediliyor.
