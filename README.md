@@ -34,7 +34,6 @@ A2A için müşterinin ürün satın aldığı süreci örnek olarak verebiliriz
 * SNS amazon tarafından full yönetilen ve otomatik scale edilen bir hizmettir. Yani infrastructure, host, instance servisleri hakkında endişelenmenize gerek yok.
 * SNS mesajları kaybolmamasını garanti altına alır. (Diğer tarafa ulaşmasını garanti altına almaz :) ) (deadLetterQueue)
 
-
 # Topic
 Topic - Erişim noktası gibi düşünebiliriz. 
   * Örneğin bir sipariş oluşumunda olabilecek **Topic** - Create Order.
@@ -42,8 +41,6 @@ Topic - Erişim noktası gibi düşünebiliriz.
 
 # Subscription
 Topic (erişim noktalarını) dinleyen/abone olan servisler.
-
-![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_2.png)
 
 ### Type of endpoint to subscribe
 * Amazon Knesis Data Firehouse
@@ -57,6 +54,10 @@ Topic (erişim noktalarını) dinleyen/abone olan servisler.
 Subscription aldığı mesajları filtreleyebilirler. Varsayılan olarak, topic tarafından publish edilen her message subscription tarafından alınır.
 
 ![Image of Filter Policy](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_filter_policy.png)
+
+# Topic and Subscription 
+
+![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_2.png)
 
 # Encryption
 * publish message in-transit modunda default olarak encrypte ediliyor.
