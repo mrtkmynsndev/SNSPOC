@@ -44,4 +44,19 @@ A2A için müşterinin ürün satın aldığı süreci örnek olarak verebiliriz
 ![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_2.png)
 
 
+# Encryption
+* publish message in-transit modunda default olarak encrypte ediliyor.
+* Eğer verilerimiz hassas bilgiler içiriyorsa ve encrypte etmek istiyorsak (müşterilerin tckn'si gibi...) encryption modunu kullanbiliriz. (server side encryption)
+* SNS verilerin korunması için CMK oluşturmuyoruz. CMK (Customer Master Key) sayesinde SNS verileri korunuyor. 
+
+# Access Policy
+* Access policy sayesinde topic'lere kimlerin erişebileceği ve topiclerin nasıl kullanabileceğimizi yönetebiliyoruz.
+* Basic ve Advanced modu var. Basic modunda topic'e kimlerin publish yapabileceğini ya da kimlerin topic'e subscribe olabileceğini yönetebiliyoruz.
+* Policy sayesinde ne yapabiliriz.
+  * Belirli aws hesaplarının topic'e erişimesine izin verebiliriz.
+  * Subsription'lara limit koyabiliriz. Örneğin HTTPS protocol, 
+  * AWS SQS queue mesaj atabiliriz.
+  * AWS kaynaklarının topic'e yayın yapmasına izin verebiliriz.
+
+# Delivery Retry
 
