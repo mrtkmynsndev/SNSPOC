@@ -123,3 +123,8 @@ A2A için müşterinin ürün satın aldığı süreci örnek olarak verebiliriz
 # Delivery Status Logging
 AWS SNS farklı endpointlere sahip (HTTP, Lambda, SQS, Application)  topic'e gönderilen mesajların teslim durumunu kaydeder. (CloudWatch'a kaydeder)
 * **Success Sample Rate:** teslim edilen başarılı mesajların yüzdesi. 100% yaptığımız topic'e gelen her bir mesajı CloudWatch'a kaydeder. (CloudWatch log maliyetlidir.)
+
+# Tags
+AWS SNS Topic lere atanan metadata etiketler. Bu etiketler sayesinde AWS SNS kaynaklarını izleyebiliriz.
+* Örneğin birden fazla topic var ve belirli topiclerde fatura etiketi kullandık ve bu etiketi kullanarak fatura ile ilgili topicleri izleyebiliriz.
+* Her bir etkiet key ve value alanlarından oluşur.
