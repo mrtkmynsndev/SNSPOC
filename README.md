@@ -58,15 +58,68 @@ A2A için müşterinin ürün satın aldığı süreci örnek olarak verebiliriz
   * Subsription'lara limit koyabiliriz. Örneğin HTTPS protocol, 
   * AWS SQS queue mesaj atabiliriz.
   * AWS kaynaklarının topic'e yayın yapmasına izin verebiliriz.
+```
+{
+  "Version": "2008-10-17",
+  "Id": "__default_policy_ID",
+  "Statement": [
+    {
+      "Sid": "__default_statement_ID",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": [
+        "SNS:Publish",
+        "SNS:RemovePermission",
+        "SNS:SetTopicAttributes",
+        "SNS:DeleteTopic",
+        "SNS:ListSubscriptionsByTopic",
+        "SNS:GetTopicAttributes",
+        "SNS:Receive",
+        "SNS:AddPermission",
+        "SNS:Subscribe"
+      ],
+      "Resource": "arn:aws:sns:eu-west-2:493815254296:CustomerOrderFanout",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceOwner": "493815254296"
+        }
+      }
+    }
+  ]
+}
+ ```
 
 # Delivery Retry
 * AWS SNS'in mesajı iletme konusunda başarısız olduğu durumları nasıl ele alacağını tanımlandığı yer. (Ör: başarısız olduğu durumda kaç kere deneyeceğinin tanımları vs...)
 * Varsayılan ayar default geliyor.
 * Policy'deki bazı tanımlar
-  * **Number of retry:** Başarısız mesajların gecikmenin kaç kere yapılacağının tanımı
-  * **Retries without delay:** Gecikmeden yapılacak yeniden deneme sayısı (mümkün olan en kısa sürede). 
+  * **Number of retry:** Gecikmenin kaç kere yapılacağının tanımı. (Ör: 3 kere herhangi bir endpoint 200 OK mesajı gelmediğinde deneyeceği deneme sayısı)
+  * **Retries without delay:** Gecikmeden yapılacak yeniden deneme sayısı (mümkün olan en kısa sürede). (best practice bir sonraki denemede delay koymak)
   * **Minumum delay:** Yeniden deneme için minumum gecikme tanımı.(Ör: topic'e gönderilen mesaj başarısız oldu ve hemen tekrar deneme 10sn sonra tekrar dene)
   * **Maximum delay:**  Yeniden deneme için maksimum gecikme tanımı.
   * **Minimum delay retries:**  Gecikme başlatmadan önce minDelayTarget aralıklarında yapılacak yeniden deneme sayısı.
   * **Maximum delay retries:**  Gecikme başlatmadan önce maxDelayTarget aralıklarında yapılacak yeniden deneme sayısı.
-  * **Retry-backoff function:** Gecikme arasında geri çekilme modeli: Doğrusal, Üstel veya Aritmetik.
+  * **Retry-backoff function:** Gecikme modeli: Doğrusal, Üstel veya Aritmetik.
+
+  ```
+   {
+     "http": {
+       "defaultHealthyRetryPolicy": {
+         "numRetries": 3,
+         "numNoDelayRetries": 0,
+         "minDelayTarget": 20,
+         "maxDelayTarget": 20,
+         "numMinDelayRetries": 0,
+         "numMaxDelayRetries": 0,
+         "backoffFunction": "linear"
+       },
+       "disableSubscriptionOverrides": false
+     }
+   }
+   ```
+
+# Delivery Status Logging
+AWS SNS farklı endpointlere sahip (HTTP, Lambda, SQS, Application)  topic'e gönderilen mesajların teslim durumunu kaydeder. (CloudWatch'a kaydeder)
+* **Success Sample Rate:** teslim edilen başarılı mesajların yüzdesi. 100% yaptığımız topic'e gelen her bir mesajı CloudWatch'a kaydeder. (CloudWatch log maliyetlidir.)
