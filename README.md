@@ -1,6 +1,15 @@
 # What is SNS?
 SNS pub/sub patterni ele alan uygulamadan uygulamaya (A2A) ya da uygulamadan kişiye (A2P) iletişim için yönetilen mesajlaşma hizmetidir.
-* Application to Person
+
+### Application to Person
+A2P push notification örneğini verebiliriz. Örneğin e-commerce projemizde kullanıcılara ya da özel kullanıcılara promosyon mesajları atıp kullanıcıların mobil, websitesi veya diğer kaynaklara erişimini artırabiliriz.
+
+![Image of A2P](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_3.png)
+
+### Application to Application
+A2A için müşterinin ürün satın aldığı süreci örnek olarak verebiliriz. Müşteri ürünü satın aldıktan sonra ürünle ilgili bir takım analizler ya da farklı işlemler yapmak için kullanabiliriz. 
+
+![Image of A2P](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_a2a.png)
 
 # Pub/Sub Pattern 
 * Pub (publisher) (mesaj yayınlayan) ve Sub (Subscriber) (mesajı alan)
