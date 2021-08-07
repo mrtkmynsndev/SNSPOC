@@ -51,6 +51,7 @@ A2A için müşterinin ürün satın aldığı süreci örnek olarak verebiliriz
 
 # Access Policy
 * Access policy sayesinde topic'lere kimlerin erişebileceği ve topiclerin nasıl kullanabileceğimizi yönetebiliyoruz.
+* Varsayılan ayar default geliyor.
 * Basic ve Advanced modu var. Basic modunda topic'e kimlerin publish yapabileceğini ya da kimlerin topic'e subscribe olabileceğini yönetebiliyoruz.
 * Policy sayesinde ne yapabiliriz.
   * Belirli aws hesaplarının topic'e erişimesine izin verebiliriz.
@@ -59,4 +60,13 @@ A2A için müşterinin ürün satın aldığı süreci örnek olarak verebiliriz
   * AWS kaynaklarının topic'e yayın yapmasına izin verebiliriz.
 
 # Delivery Retry
-
+* AWS SNS'in mesajı iletme konusunda başarısız olduğu durumları nasıl ele alacağını tanımlandığı yer. (Ör: başarısız olduğu durumda kaç kere deneyeceğinin tanımları vs...)
+* Varsayılan ayar default geliyor.
+* Policy'deki bazı tanımlar
+  * **Number of retry:** Başarısız mesajların gecikmenin kaç kere yapılacağının tanımı
+  * **Retries without delay:** Gecikmeden yapılacak yeniden deneme sayısı (mümkün olan en kısa sürede). 
+  * **Minumum delay:** Yeniden deneme için minumum gecikme tanımı.(Ör: topic'e gönderilen mesaj başarısız oldu ve hemen tekrar deneme 10sn sonra tekrar dene)
+  * **Maximum delay:**  Yeniden deneme için maksimum gecikme tanımı.
+  * **Minimum delay retries:**  Gecikme başlatmadan önce minDelayTarget aralıklarında yapılacak yeniden deneme sayısı.
+  * **Maximum delay retries:**  Gecikme başlatmadan önce maxDelayTarget aralıklarında yapılacak yeniden deneme sayısı.
+  * **Retry-backoff function:** Gecikme arasında geri çekilme modeli: Doğrusal, Üstel veya Aritmetik.
