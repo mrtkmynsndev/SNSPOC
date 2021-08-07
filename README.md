@@ -55,6 +55,10 @@ Subscription aldığı mesajları filtreleyebilirler. Varsayılan olarak, topic 
 
 ![Image of Filter Policy](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_filter_policy.png)
 
+### Redrive policy (dead-letter queue)
+Subscription'lara başarılı bir şekilde iletilemeyen mesajların kaydedildiği yer. 
+* DLQ mesajların yazılabilmesi için Amazon SQS queue gereklidir. (iletilemeyen mesajların temsilcisi gibi düşünebiliriz.)
+
 # Topic and Subscription 
 
 ![Image of Topic&Subsc](https://github.com/mrtkmynsndev/SNSPOC/blob/main/images/sns_2.png)
