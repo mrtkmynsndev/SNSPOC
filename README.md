@@ -110,6 +110,7 @@ Subscription'lara başarılı bir şekilde iletilemeyen mesajların kaydedildiğ
   ]
 }
  ```
+**Kullanım Önerisi:** publish ve subscrine için "Everyone" olarak seçilmesi önerilmiyor. Publish için "Only the specified AWS account", Subscribe için ise "Only request with certain endpoints" seçimleri öneriliyor.
 
 # Delivery Retry
 * AWS SNS'in mesajı iletme konusunda başarısız olduğu durumları nasıl ele alacağını tanımlandığı yer. (Ör: başarısız olduğu durumda kaç kere deneyeceğinin tanımları vs...)
