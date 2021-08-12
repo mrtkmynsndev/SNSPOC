@@ -116,7 +116,7 @@ Subscription'lara başarılı bir şekilde iletilemeyen mesajların kaydedildiğ
 * AWS SNS'in mesajı iletme konusunda başarısız olduğu durumları nasıl ele alacağını tanımlandığı yer. (Ör: başarısız olduğu durumda kaç kere deneyeceğinin tanımları vs...)
 * Varsayılan ayar default geliyor.
 * Policy'deki bazı tanımlar
-  * **Number of retry:** Gecikmenin kaç kere yapılacağının tanımı. (Ör: 3 kere herhangi bir endpoint 200 OK mesajı gelmediğinde deneyeceği deneme sayısı)
+  * **Number of retry:** Gecikmenin kaç kere yapılacağının tanımı. (Ör: 3 kere herhangi bir endpoint 200 OK mesajı gelmediğinde deneyeceği deneme sayısı) 2-5 arası çalışacak şekilde set edilmesi öneriliyor.
   * **Retries without delay:** Gecikmeden yapılacak yeniden deneme sayısı (mümkün olan en kısa sürede). (best practice bir sonraki denemede delay koymak)
   * **Minumum delay:** Yeniden deneme için minumum gecikme tanımı.(Ör: topic'e gönderilen mesaj başarısız oldu ve hemen tekrar deneme 10sn sonra tekrar dene)
   * **Maximum delay:**  Yeniden deneme için maksimum gecikme tanımı.
