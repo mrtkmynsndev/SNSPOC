@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/tF5j0OJK0mNl2w1DQPHdG5RmA6rauj/6CdHq+nsdCFUOdzrK/QSweKtLqfjE46ITZOCpEbNGusStAlKhfkmMg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mert.kimyonsen\\Desktop\\Aws training\\SNS\\SNSPOC\\src\\SnsSendMessage\\SnsSendMessage.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mert.kimyonsen\\.nuget\\packages\\awssdk.core\\3.7.2.3\\awssdk.core.3.7.2.3.nupkg.sha512",
+    "C:\\Users\\mert.kimyonsen\\.nuget\\packages\\awssdk.simplenotificationservice\\3.7.2.22\\awssdk.simplenotificationservice.3.7.2.22.nupkg.sha512"
+  ],
+  "logs": []
+}
