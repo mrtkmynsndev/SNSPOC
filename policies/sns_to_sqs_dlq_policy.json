@@ -1,0 +1,19 @@
+{
+    "Version": "2008-10-17",
+    "Id": "__default_policy_ID",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "sns.amazonaws.com"
+        },
+        "Action": "sqs:SendMessage",
+        "Resource": "arn:aws:sqs:<your-sqs-source-arn>",
+        "Condition": {
+          "ArnEquals": {
+            "aws:SourceArn": "<your-sns-source-arn>"
+          }
+        }
+      }
+    ]
+  }

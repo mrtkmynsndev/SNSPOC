@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "FZ25oVj4OZoFcBtMj0iI90TKhj9kw/CwOzs7qZ3voEuLASqAqj1TRDjrhHdGMJrG2BDqouT8E8867ThWHPohkQ==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\mert.kimyonsen\\Desktop\\Aws training\\SNS\\SNSPOC\\src\\SNSEventSample\\src\\SNSEventSample\\SNSEventSample.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mert.kimyonsen\\.nuget\\packages\\amazon.lambda.core\\2.0.0\\amazon.lambda.core.2.0.0.nupkg.sha512",
+    "C:\\Users\\mert.kimyonsen\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.1.0\\amazon.lambda.serialization.systemtextjson.2.1.0.nupkg.sha512",
+    "C:\\Users\\mert.kimyonsen\\.nuget\\packages\\amazon.lambda.snsevents\\2.0.0\\amazon.lambda.snsevents.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
